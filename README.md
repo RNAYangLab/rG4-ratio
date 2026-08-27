@@ -1,5 +1,5 @@
 # rG4 ratio
-- rG4 ratio includes Python scripts for quantifying transcriptome-level SHALiEP-seq reverse transcript ribosomal stalling counts and characterizing signal distributions within RNA G-quadruplex (rG4) regions by G4 raio. See Lan et al, 2026.
+- rG4 ratio includes Python scripts for quantifying transcriptome-level SHALiEP-seq reverse transcript ribosomal stalling counts and characterizing signal distributions within RNA G-quadruplex (rG4) regions by G4 ratio. 
 - The workflow contains two main steps:
   1. Generate transcript-level stalling counts and coverage from aligned sequencing reads as Bam file with corresponding species transcript fasta file.
   2. Calculate rG4 region siganal metrics, including average rG4 region counts, GINI index and G4 ratio.
