@@ -23,10 +23,11 @@ The average stalling count across all guanine (G) positions within the annotated
 ### GINI index
 Gini index was calculated from the SHALiPE-seq libraries with reads continuous number of G residues in G-tract as described.
 
-$$
+```math
+\mathrm{GINI\ index} = 
 \frac{\sum_{i=1}^{n}\sum_{j=1}^{n}\left|r_i-r_j\right|}
 {2n^2\bar{r}}
-$$
+```
 
 where $n$ denotes the number of G residues in the G-tracts (continuous runs of guanine in the G-rich region), $r_i$ denotes the reads number in SHALiPE profiling at position $i$.
 ### G4 ratio
