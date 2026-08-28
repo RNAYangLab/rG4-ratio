@@ -6,7 +6,7 @@
 ## Requirement
 - Python 3 is recommend.
 - Required Python packages: pip install pysam biopython
-## Step 1: Generate stalling counts and coverage
+## Step 1: Generation of stalling counts and coverage
 The input BAM file should have the associated index files.  
 For each transcript in input transcript FASTA file, this script records:
 - the transcript sequence.
@@ -16,7 +16,7 @@ For each transcript in input transcript FASTA file, this script records:
 python get_stalling_counts.py --threads threads --fasta transcript.fa --bam sample.bam --output sample.counts
 ```
   
-## Step 2：Calculate rG4 region siganal metrics
+## Step 2：Calculation of rG4 region signal
 For each annotated rG4 region, it extracts the corresponding sequence and stalling counts, then calculates average rG4 region counts, GINI index and G4 ratio:  
 ### average rG4 region counts
 The average stalling count across all guanine (G) positions within the annotated rG4 region.
