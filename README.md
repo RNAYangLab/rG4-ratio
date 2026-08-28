@@ -20,7 +20,7 @@ python get_stalling_counts.py --threads threads --fasta transcript.fa --bam samp
 For each annotated rG4 region, it extracts the corresponding sequence and stalling counts, then calculates average rG4 region counts, GINI index and G4 ratio:  
 ### average rG4 region counts
 The average stalling count across all guanine (G) positions within the annotated rG4 region.
-### GINI index (`gini`)
+### GINI index
 Gini index was calculated from the SHALiPE-seq libraries with reads continuous number of G residues in G-tract as described.
 
 $$
