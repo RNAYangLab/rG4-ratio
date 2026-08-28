@@ -5,13 +5,6 @@ Created on Mon Jul  7 11:16:56 2025
 @author: Administrator
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 10 15:55:34 2025
-
-@author: Administrator
-"""
-
 import numpy as np 
 import threading
 import os
@@ -142,57 +135,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# RG4list_path = r'C:\Users\Administrator\Desktop\temp\temp\test_RG4Alllist.txt'
-# count_files = [r'C:\Users\Administrator\Desktop\temp\temp\test.counts']
-# output_path = r'C:\Users\Administrator\Desktop\temp\temp\test_output_local.tsv'
-# num_threads = 10
-
-# with open(RG4list_path, 'r') as f:
-#     header = f.readline().strip()
-#     with open(output_path, 'w') as f_out:
-#         f_out.write(f'{header}')
-#         for file_name in count_files:
-#             f_out.write(f'\tavgCount_{os.path.basename(file_name)}\tgini_{os.path.basename(file_name)}')
-#         f_out.write('\n')
-
-# results = []
-# threads = []
-
-# for file_name in count_files:
-#     data = load_count_file(file_name)
-#     t = threading.Thread(
-#         target=lambda q, arg1, arg2, arg3, arg4: q.append(
-#             process_data(arg1, arg2, arg3, arg4)
-#         ),
-#         args=(results, data, RG4list_path, output_path, os.path.basename(file_name))
-#     )
-#     threads.append(t)
-#     t.start()
-#     if len(threads) >= num_threads:
-#         for t in threads:
-#             t.join()
-#         threads = []
-
-# for t in threads:
-#     t.join()
-
-# if not results:
-#     print("❌ No results generated. Please check your input files.")
-# else:
-#     df = pd.DataFrame(results[0], columns=['gene_id', 'motif', 'motif_name', 'site', 'beg_num', 'end_num',
-#                                             'symbol1', 'symbol2', 'symbol3', 'matched_seq',
-#                                             'avgCount_' + os.path.basename(count_files[0]),
-#                                             'gini_' + os.path.basename(count_files[0]),
-#                                             'G4ratio_' + os.path.basename(count_files[0])])
-#     for i in range(1, len(results)):
-#         df_temp = pd.DataFrame(results[i], columns=['gene_id', 'motif', 'motif_name', 'site', 'beg_num', 'end_num',
-#                                                     'symbol1', 'symbol2', 'symbol3', 'matched_seq',
-#                                                     'avgCount_' + os.path.basename(count_files[i]),
-#                                                     'gini_' + os.path.basename(count_files[i]),
-#                                                     'G4ratio' + os.path.basename(count_files[i])])
-#         df = pd.merge(df, df_temp, on=['gene_id', 'motif', 'motif_name', 'site', 'beg_num', 'end_num',
-#                                         'symbol1', 'symbol2', 'symbol3', 'matched_seq'])
-
-#     df.to_csv(output_path, index=False, sep='\t')
-#     print(f"✅ Output saved to: {output_path}")
